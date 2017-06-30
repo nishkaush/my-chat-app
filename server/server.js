@@ -7,6 +7,8 @@ var moment = require("moment");
 var http = require("http");
 var socketIO = require("socket.io");
 
+// console.log(process.env);
+const port = process.env.PORT || 3000;
 
 var app = express();
 var server = http.createServer(app);
@@ -156,6 +158,6 @@ io.on("connection", (socket) => {
 
 
 
-server.listen(3000, () => {
-    console.log("Server has started on port 3000");
+server.listen(port, () => {
+    console.log(`Server has started on port ${port}`);
 });
