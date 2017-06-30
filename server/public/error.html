@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oops! Something went sideways</title>
+    <style media="screen">
+        body {
+            background: linear-gradient(to right, #f7ff00, #db36a4);
+            /*color: white;*/
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            font-family: avenir;
+            height: 700px;
+        }
+
+        form {
+            width: 60%;
+            text-align: center;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            font-size: 1.1em;
+            background: teal;
+            color: white;
+            border: 1px solid teal;
+            box-shadow: 1px 1px 1px 1px #005959;
+            cursor: pointer;
+        }
+
+        p:nth-child(1) {
+            font-size: 2em;
+            text-transform: capitalize;
+        }
+
+        p:nth-child(2) {
+            font-size: 1.5em;
+        }
+
+        p:nth-child(3) {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/">
+        <p>You have reached the end of the Internet! Just Kidding!</p>
+        <p>The username you entered is taken.</p>
+        <p>Please try a different one by going back</p>
+
+        <button type="Submit">Back to Login</button>
+
+    </form>
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        var socket = io();
+    </script>
+
+    <script src="chat.js"></script>
+
+
+
+</body>
+
+</html>

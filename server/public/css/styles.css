@@ -1,0 +1,73 @@
+body {
+    /*width: 100%;*/
+    height: 720px;
+    margin: 0;
+    padding: 0;
+    font-family: Avenir;
+}
+
+
+/*#FF9933, #138808*/
+
+
+/*background: linear-gradient(to right, #43cea2 34%, #ffffff 34%, #ffffff 66%, #185a9d 66%);*/
+
+
+/*blue -background: linear-gradient(to right, #43cea2, #185a9d);*/
+
+.main-div {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f7ff00, #db36a4);
+    display: flex;
+    align-items: center;
+}
+
+#login-form {
+    width: 30%;
+    height: 20em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+#login-form input[required] {
+    width: 70%;
+    height: 2.5em;
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 1px solid #a1a1af;
+    box-shadow: inset 1px 1px 1px 1px #a1a1af;
+    font-size: 1em;
+    color: #191919;
+    padding-left: 1%;
+}
+
+#login-form input[required]:focus {
+    background: lavender;
+    outline: none;
+}
+
+#enter {
+    width: 80%;
+    height: 2.5em;
+    background: navy;
+    border: 1px solid navy;
+    box-shadow: 2px 2px 2px 2px #323232;
+    color: white;
+    margin: 0 auto;
+    margin-top: 10%;
+    font-size: 1em;
+    cursor: pointer;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+#enter:hover {
+    background: darkblue;
+    border: 1px solid darkblue;
+}

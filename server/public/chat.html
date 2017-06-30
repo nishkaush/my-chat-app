@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lets Chat!</title>
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+
+<body>
+
+    <!-- <div id="main-div"></div> -->
+    <!-- following code is for left side panel for users -->
+    <div id="users-list-div">
+        <h3>Current Users in This Room</h3>
+        <ul id="users-list"></ul>
+    </div>
+
+    <!-- following code is for middle panel for seeing and posting text -->
+    <div id="middle-div">
+        <div id="messages-view-panel"></div>
+
+        <div id="typing-panel">
+            <textarea id="textarea" name="name" placeholder="Type a message"></textarea>
+            <button id="send-btn" type="button" name="button">Send</button>
+        </div>
+    </div>
+
+    <!-- following code is for right side panel for available rooms -->
+    <div id="rooms-list-div">
+        <h3>Available Rooms</h3>
+        <p>Click a room to join it</p>
+        <span>Highlighted room is current room</span>
+        <ol id="rooms-list"></ol>
+    </div>
+
+
+
+
+
+
+    <!-- ########Script Tags Start Here -->
+    <script id="message-template" type="text/template">
+        <div>
+            <p class="name">{{from}}</p>
+            <p class="text">&nbsp;{{text}}</p>
+            <p class="time">{{createdAt}}</p>
+        </div>
+    </script>
+
+    <script id="users-template" type="text/template">
+        <li id={{idName}}>{{user}}</li>
+    </script>
+
+    <script id="rooms-template" type="text/template">
+        <li class="available-rooms" id={{idName}}>{{room}}</li>
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="mustache.js"></script>
+    <script src="moment.js"></script>
+    <script src="lodash.js"></script>
+    <script src="chat.js"></script>
+
+
+
+</body>
+
+</html>

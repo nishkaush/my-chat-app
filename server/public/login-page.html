@@ -12,16 +12,16 @@
 <body>
 
     <div class="main-div">
-        <form class="login-form" action="rooms-page.html">
+        <form id="login-form" action="/chat.html">
             <h1>Welcome To Chat</h1>
-            <input type="text" placeholder="email">
-            <input type="text" placeholder="password">
-            <button type="submit" id="login-button">Login</button>
-            <button type="submit" id="signup-button">Signup</button>
+            <input type="text" name="username" placeholder="Enter User name" required autofocus maxlength="20" minlength="2">
+            <input type="text" name="roomname" placeholder="Enter room name" required maxlength="20" minlength="3">
+            <input type="submit" name="button" value="Enter" id="enter">
         </form>
     </div>
 
-
+    <script src="chat.js">
+    </script>
 </body>
 
 </html>
