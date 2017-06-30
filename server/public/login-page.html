@@ -12,12 +12,17 @@
 <body>
 
     <div class="main-div">
+
         <form id="login-form" action="/chat.html">
             <h1>Welcome To Chat</h1>
-            <input type="text" name="username" placeholder="Enter User name" required autofocus maxlength="20" minlength="2">
-            <input type="text" name="roomname" placeholder="Enter room name" required maxlength="20" minlength="3">
-            <input type="submit" name="button" value="Enter" id="enter">
+
+            <input type="text" name="username" placeholder="Enter user name" required autofocus maxlength="15" minlength="2" autocomplete="off">
+
+            <input type="text" name="roomname" placeholder="Enter room name" required maxlength="15" minlength="2" autocomplete="off">
+
+            <input type="submit" name="button" value="Login" id="enter">
         </form>
+
     </div>
 
     <script src="chat.js">

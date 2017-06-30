@@ -48,7 +48,7 @@ h1 {
 }
 
 #login-form input[required]:focus {
-    background: lavender;
+    background: wheat;
     outline: none;
 }
 

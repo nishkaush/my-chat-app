@@ -72,7 +72,8 @@ sendBtn.addEventListener("click", function() {
 
 textarea.addEventListener("keyup", function(e) {
     e.preventDefault();
-    if (e.keyCode === 13) {
+    var str = textarea.value.trim();
+    if (e.keyCode === 13 && str.length !== 0) {
         sendBtn.click();
     }
 });
@@ -89,11 +90,20 @@ socket.on("usersArr", function(data) {
         .map(_.ary(_.partial(_.split, _, '='), 1))
         .fromPairs()
         .value(); //{"username":"saba","roomname":"newzealand"}
+    // following "for loop" is for replacing "+" with spaces in names
+    for (var prop in lodashResult) {
+        if (lodashResult[prop].indexOf("+") !== -1) {
+            lodashResult[prop] = lodashResult[prop].split("+").join(" ");
+        } else if (lodashResult[prop].indexOf("%20") !== -1) {
+            lodashResult[prop] = lodashResult[prop].split("%20").join(" ");
+        }
+    }
 
+    console.log(lodashResult);
     // following code highlights current user
     myarr.forEach(function(e) {
         if (e.username === lodashResult.username) {
-            var idName = "current-room";
+            var idName = "current-user";
         } else {
             var idName = "";
         }
@@ -118,10 +128,19 @@ socket.on("roomsArr", function(data) {
         .fromPairs()
         .value(); //{"username":"saba","roomname":"newzealand"}
 
+    // following "for loop" is for replacing "+" with spaces in names
+    for (var prop in lodashResult) {
+        if (lodashResult[prop].indexOf("+") !== -1) {
+            lodashResult[prop] = lodashResult[prop].split("+").join(" ");
+        } else if (lodashResult[prop].indexOf("%20") !== -1) {
+            lodashResult[prop] = lodashResult[prop].split("%20").join(" ");
+        }
+    }
+
     // following code highlights current room
     myarr.forEach(function(e) {
         if (e.roomname === lodashResult.roomname) {
-            var idName = "current-user";
+            var idName = "current-room";
         } else {
             var idName = "";
         }

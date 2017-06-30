@@ -61,7 +61,7 @@ io.on("connection", (socket) => {
             // following code welcomes user
             socket.emit("newMessage", {
                 from: "Admin",
-                text: `Welcome ${parsed.username}`,
+                text: `Welcome ${parsed.username.replace(/\b\w/g, l => l.toUpperCase())}!`,
                 createdAt: moment().format('LT')
             });
 
@@ -81,7 +81,7 @@ io.on("connection", (socket) => {
             // io.to.emit will send to everyone including the user who started it
             socket.broadcast.to(parsed.roomname).emit("newMessage", {
                 from: "Admin",
-                text: `${parsed.username} has joined`,
+                text: `${parsed.username.replace(/\b\w/g, l => l.toUpperCase())} has joined!`,
                 createdAt: moment().format('LT')
             });
 
