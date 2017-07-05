@@ -101,7 +101,6 @@ io.on("connection", (socket) => {
 
 
 
-
     // listen for click event coming from send button on client side
     // extract who's who info of the message
     // then run io.emit to send the message to everyone

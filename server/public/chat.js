@@ -26,7 +26,7 @@ socket.on("connect", function() {
     });
 });
 
-// following code is for any errors while validating username
+// following code is for ny errors while validating username
 
 socket.on("stopit", function(data) {
     console.log(data.err);

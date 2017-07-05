@@ -7,12 +7,11 @@ body {
     height: 710px;
     font-family: avenir;
     display: flex;
-    background: linear-gradient(to right, #f7ff00, #db36a4);
+    /*background: linear-gradient(to right, #f7ff00, #db36a4);*/
 }
 
 h3 {
     font-weight: normal;
-    /*border: 1px solid white;*/
     margin-top: 4%;
     padding: 3% 0;
     font-size: 1.5em;
@@ -52,6 +51,8 @@ h3 {
     flex: 0.3;
     color: white;
     text-align: center;
+    background: linear-gradient(#283655, #4d648d);
+    /*background: #eb8a3e;*/
 }
 
 #users-list-div h3 {}
@@ -68,9 +69,10 @@ ul li {
     text-align: center;
     margin: 5% auto;
     text-transform: capitalize;
-    color: blue;
+    color: white;
     background: #fff;
     letter-spacing: 1px;
+    background: none;
 }
 
 
@@ -80,7 +82,7 @@ ul li {
     flex: 1;
     display: flex;
     flex-flow: column;
-    /*background: white;*/
+    /*background: #d0e1f9;*/
 }
 
 #messages-view-panel {
@@ -101,7 +103,6 @@ ul li {
     font-weight: bold;
     text-transform: capitalize;
     padding: 1% 0;
-    /*border: 1px solid #000;*/
     text-align: center;
 }
 
@@ -110,6 +111,8 @@ ul li {
     background: white;
     padding: 1% 0;
     font-size: 0.9em;
+    background: #f4ebdb;
+    /*background: #b9c4c9;*/
 }
 
 .time {
@@ -122,7 +125,7 @@ ul li {
 #typing-panel {
     flex: 0.08;
     display: flex;
-    /*border-top: 2px solid navy;*/
+    border-top: 2px solid #1e1f26;
 }
 
 textarea {
@@ -139,9 +142,9 @@ textarea:focus {
 button {
     flex: 0.3;
     font-size: 1em;
-    background: darkblue;
+    background: #1e1f26;
     color: white;
-    border: 1px solid darkblue;
+    border: 1px solid #1e1f26;
     font-size: 1.2em;
     letter-spacing: 1px;
     cursor: pointer;
@@ -156,9 +159,10 @@ button:focus {
 
 #rooms-list-div {
     flex: 0.3;
-    /*background: #138808;*/
     color: white;
     text-align: center;
+    background: linear-gradient(#283655, #4d648d);
+    /*background: #d24136;*/
 }
 
 #rooms-list {
@@ -168,13 +172,12 @@ button:focus {
 
 ol li {
     width: 60%;
-    border: 1px solid white;
+    border: 2px solid white;
     padding: 2% 0;
     text-align: center;
     margin: 5% auto;
     text-transform: capitalize;
-    color: slateblue;
-    background: #fff;
+    color: white;
     letter-spacing: 1px;
     cursor: pointer;
     font-size: 1em;
